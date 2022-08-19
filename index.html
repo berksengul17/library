@@ -22,48 +22,53 @@
             <div class="title">Add Book</div>
             <button data-close-button class="close-button">&times;</button>
           </div>
-          <div class="modal-body">
-            <form class="add-book-form">
-              <!-- <label for="title">Title</label> -->
-              <input type="text" name="title" id="title" placeholder="Title" />
+          <form class="add-book-form">
+            <!-- <label for="title">Title</label> -->
+            <input
+              type="text"
+              name="title"
+              class="book-info"
+              id="title"
+              placeholder="Title"
+            />
 
-              <!-- <label for="author">Author</label> -->
-              <input
-                type="text"
-                name="author"
-                id="author"
-                placeholder="Author"
-              />
+            <!-- <label for="author">Author</label> -->
+            <input
+              type="text"
+              name="author"
+              class="book-info"
+              id="author"
+              placeholder="Author"
+            />
 
-              <!-- <label for="page">Page</label> -->
-              <input
-                type="number"
-                name="page"
-                id="page"
-                min="0"
-                max="10000"
-                placeholder="Page"
-              />
+            <!-- <label for="page">Page</label> -->
+            <input
+              type="number"
+              name="page"
+              class="book-info"
+              id="page"
+              min="0"
+              max="10000"
+              placeholder="Page"
+            />
 
-              <!-- <label for="score">Score</label> -->
-              <input
-                type="number"
-                name="score"
-                id="score"
-                min="0"
-                max="10"
-                placeholder="Score"
-              />
+            <!-- <label for="score">Score</label> -->
+            <input
+              type="number"
+              name="score"
+              class="book-info"
+              id="score"
+              min="0"
+              max="10"
+              placeholder="Score"
+            />
 
-              <div class="state-container">
-                <input type="checkbox" name="state" id="state" />
-                <label for="state">Is read?</label>
-              </div>
-              <button type="submit" class="submit-button">
-                Add to Library
-              </button>
-            </form>
-          </div>
+            <div class="state-container">
+              <input type="checkbox" name="state" id="state" />
+              <label for="state">Read</label>
+            </div>
+            <button type="submit" class="submit-button">Add to Library</button>
+          </form>
         </div>
         <div id="overlay"></div>
       </main>
