@@ -40,11 +40,15 @@ main {
   box-shadow: 0px 10px 10px lightgray;
 }
 
+/* HEADER */
+
 header {
   position: relative;
   font-size: 50px;
   font-weight: 800;
 }
+
+/* MAIN */
 
 main {
   flex: 1;
@@ -185,6 +189,8 @@ main {
   opacity: 1;
   pointer-events: all;
 }
+
+/* FOOTER */
 
 footer {
   font-size: 24px;
