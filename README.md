@@ -1,8 +1,8 @@
 #JavaScript Library
   A simple library application made with **HTML**, **CSS**, and **JavaScript**.
-This project is from The Odin Project [cirriculum][https://www.theodinproject.com/lessons/node-path-javascript-library#assignment]
+This project is from The Odin Project [cirriculum](https://www.theodinproject.com/lessons/node-path-javascript-library#assignment)
 
-🔗 **Live preview** of the project is [here]()
+🔗 **Live preview** of the project is [here](https://berksengul17.github.io/library/)
 
 ###Overview
 #### **Features**
@@ -23,5 +23,5 @@ This project is from The Odin Project [cirriculum][https://www.theodinproject.co
 * Used grid and flexbox to create a layout
 * Used transition to make smoother animations
 * Added color palette to `:root`
-* First time styling input
+* First time used favicon
 
