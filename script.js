@@ -7,8 +7,6 @@ const closeModalBtn = document.querySelector(".close-button");
 const modal = document.querySelector("#modal");
 const overlay = document.querySelector("#overlay");
 
-let myLibrary = [];
-
 addBookBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
@@ -42,7 +40,6 @@ function createBook(formData) {
 function addBookToLibrary() {
   const formData = new FormData(form);
   const newBook = createBook(formData);
-  myLibrary.push(newBook);
   display(newBook);
 }
 
@@ -51,10 +48,12 @@ function display(newBook) {
   const isRead = newBook.state ? "read" : "not-read";
   const pageContent = newBook.page + " pages";
   const scoreContent = newBook.score + "/10";
+  const titleContent = capitalize(newBook.title);
+  const authorContent = capitalize(newBook.author);
 
   const bookContainer = createDomElement("div", "", "book-container");
-  const title = createDomElement("span", newBook.title, "title");
-  const author = createDomElement("span", newBook.author, "author");
+  const title = createDomElement("span", titleContent, "title");
+  const author = createDomElement("span", authorContent, "author");
   const page = createDomElement("span", pageContent, "page");
   const score = createDomElement("span", scoreContent, "score");
   const stateBtn = createDomElement(
@@ -65,6 +64,9 @@ function display(newBook) {
   );
   const removeBtn = createDomElement("button", "Remove", "remove-button");
 
+  stateBtn.addEventListener("click", changeState);
+  removeBtn.addEventListener("click", removeBook);
+
   bookContainer.appendChild(title);
   bookContainer.appendChild(author);
   bookContainer.appendChild(page);
@@ -74,6 +76,8 @@ function display(newBook) {
 
   mainContainer.appendChild(bookContainer);
 }
+
+// UTILITY FUNCTIONS
 
 //Create a DOM element with given type, content and classes
 function createDomElement(type, content, ...classes) {
@@ -87,6 +91,22 @@ function createDomElement(type, content, ...classes) {
   return element;
 }
 
+function changeState(e) {
+  if (e.target.classList.contains("read")) {
+    e.target.classList.add("not-read");
+    e.target.classList.remove("read");
+  } else {
+    e.target.classList.add("read");
+    e.target.classList.remove("not-read");
+  }
+}
+
+function removeBook(e) {
+  const btn = e.target;
+  const bookContainer = btn.parentElement;
+  mainContainer.removeChild(bookContainer);
+}
+
 function openModal() {
   modal.classList.add("active");
   overlay.classList.add("active");
@@ -95,4 +115,9 @@ function openModal() {
 function closeModal() {
   modal.classList.remove("active");
   overlay.classList.remove("active");
+}
+
+function capitalize(str) {
+  const lower = str.toLowerCase();
+  return str.charAt(0).toUpperCase() + lower.slice(1);
 }
