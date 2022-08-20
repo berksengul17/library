@@ -54,9 +54,17 @@ main {
   flex: 1;
   width: 100%;
   background-color: var(--main-bg-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(min-content, max-content);
+  gap: 30px 40px;
+  padding: 30px 100px;
 }
 
 .add-button {
+  grid-column: 1 / -1;
+  width: fit-content;
+  justify-self: center;
   cursor: pointer;
   border: none;
   font-size: 30px;
@@ -68,6 +76,13 @@ main {
 
 .add-button:hover {
   filter: brightness(90%);
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
 }
 
 /* BOOK ADDITION MODAL */
