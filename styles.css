@@ -10,7 +10,6 @@
 
 :root {
   --main-bg-color: #f0eef1;
-  --border-radius: 10px;
   --submit-btn-color: #5cb85c;
   --submit-btn-hover: #47ce47;
   --submit-btn-active: #2ad42a;
@@ -18,6 +17,7 @@
   --book-not-read-color: #ff9c9c;
   --remove-btn-color: #ec1212;
   --remove-btn-hover: #ff0000;
+  --border-radius: 10px;
 }
 
 body {
