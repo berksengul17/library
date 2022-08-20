@@ -105,6 +105,7 @@ main {
   outline: none;
   padding: 15px 0px;
   border-radius: var(--border-radius);
+  transition: filter 0.1s ease-in-out;
 }
 
 .change-state-button.read {
@@ -119,9 +120,8 @@ main {
 .change-state-button:hover {
   filter: brightness(90%);
 }
-
 .remove-button:active {
-  background-color: var(--remove-btn-color);
+  filter: brightness(80%);
 }
 
 /* BOOK ADDITION MODAL */
