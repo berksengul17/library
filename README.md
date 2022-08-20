@@ -1,10 +1,10 @@
-#JavaScript Library
+# JavaScript Library
   A simple library application made with **HTML**, **CSS**, and **JavaScript**.
 This project is from The Odin Project [cirriculum](https://www.theodinproject.com/lessons/node-path-javascript-library#assignment)
 
 🔗 **Live preview** of the project is [here](https://berksengul17.github.io/library/)
 
-###Overview
+### Overview
 #### **Features**
 * You can add a book
 * Before adding a book you can mark if you alread read it or not
