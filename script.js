@@ -48,6 +48,7 @@ function addBookToLibrary() {
 
 function display(newBook) {
   const stateBtnContent = newBook.state ? "Read" : "Not Read";
+  const isRead = newBook.state ? "read" : "not-read";
   const pageContent = newBook.page + " pages";
   const scoreContent = newBook.score + "/10";
 
@@ -59,7 +60,8 @@ function display(newBook) {
   const stateBtn = createDomElement(
     "button",
     stateBtnContent,
-    "change-state-button"
+    "change-state-button",
+    isRead
   );
   const removeBtn = createDomElement("button", "Remove", "remove-button");
 
