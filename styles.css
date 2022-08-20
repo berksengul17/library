@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 *,
 *::before,
 *::after {
@@ -16,6 +15,10 @@
   --submit-btn-color: #5cb85c;
   --submit-btn-hover: #47ce47;
   --submit-btn-active: #2ad42a;
+  --book-read-color: #9fff9c;
+  --book-not-read-color: #ff9c9c;
+  --remove-btn-color: #ec1212;
+  --remove-btn-hover: #ff0000;
 }
 
 body {
@@ -78,11 +81,47 @@ main {
   filter: brightness(90%);
 }
 
+/* BOOK CONTAINER */
+
 .book-container {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   background-color: white;
   text-align: center;
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
+
+.book-container span,
+.book-container button {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.book-container button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 15px 0px;
+  border-radius: var(--border-radius);
+}
+
+.change-state-button.read {
+  background-color: var(--book-read-color);
+}
+
+.change-state-button.not-read {
+  background-color: var(--book-not-read-color);
+}
+
+.remove-button:hover,
+.change-state-button:hover {
+  filter: brightness(90%);
+}
+
+.remove-button:active {
+  background-color: var(--remove-btn-color);
 }
 
 /* BOOK ADDITION MODAL */
